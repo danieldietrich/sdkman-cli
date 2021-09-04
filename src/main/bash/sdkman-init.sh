@@ -181,7 +181,7 @@ if [[ "$sdkman_auto_complete" == 'true' ]]; then
 		# initialize zsh completions (if not already done)
 		if ! (( $+functions[compdef] )) ; then
 			autoload -Uz compinit
-			compinit
+			compinit -C
 		fi
 		source "${SDKMAN_DIR}/contrib/completion/zsh/sdk"
 		__sdkman_echo_debug "ZSH completion script loaded..."
